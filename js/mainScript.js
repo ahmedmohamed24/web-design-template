@@ -1,1 +1,286 @@
-function analyticsFire() { const e = document.querySelectorAll(".analyticsLabel"), t = document.querySelectorAll(".analyticImg"); let l, o = 2; for (let t of e) t.addEventListener("click", e => { s(l = e.currentTarget.attributes["label-data"].value) }); function s(l) { switch (l) { case "1": 0 !== o && (e[0].classList.add("activeItem"), e[1].classList.remove("activeItem"), e[2].classList.remove("activeItem"), t[0].style.zIndex = "0", t[1].style.zIndex = "-1", t[2].style.zIndex = "-1"); break; case "2": 1 !== o && (e[1].classList.add("activeItem"), e[0].classList.remove("activeItem"), e[2].classList.remove("activeItem"), t[0].style.zIndex = "-1", t[1].style.zIndex = "0", t[2].style.zIndex = "-1"); break; case "3": 2 !== o && (e[2].classList.add("activeItem"), e[0].classList.remove("activeItem"), e[1].classList.remove("activeItem"), t[0].style.zIndex = "-1", t[1].style.zIndex = "-1", t[2].style.zIndex = "0"); break; default: e[0].classList.add("activeItem"), e[1].classList.remove("activeItem"), e[2].classList.remove("activeItem") }1 !== (o = l - 1) && 2 !== o && 3 !== o && (o = 0) } } function scrollEvent() { let e, t = document.querySelector("nav"); const l = document.querySelector("#portfolio"); let o = l.offsetTop - l.offsetHeight; const s = document.querySelector("#blogs"); let n = s.offsetTop - s.offsetHeight; const c = document.querySelector(".blogDesign"), a = document.querySelector(".blogDescription"), r = document.querySelector("#SEO"); let i = r.offsetTop - r.offsetHeight; document.addEventListener("scroll", s => { e = s.target.scrollingElement.scrollTop, t.style.backgroundColor = e > 10 ? "#000" : "transparent", e >= o && l.classList.add("portfolioMove"), e >= n && (c.classList.add("blogAnimation"), a.classList.add("blogAnimation")), e >= i && r.classList.add("SEOAnimation") }) } function carouselFiring() { const e = document.querySelector(".carouselInnerContainer"), t = document.querySelector(".prevSlide"), l = document.querySelector(".nextSlide"), o = document.querySelectorAll(".craouselItem img"); let s = 1, n = document.querySelectorAll(".craouselItem")[0].clientWidth, c = document.querySelector("#slideNumber"); document.querySelector(".carouselOuterContainer").style.width = 1.5 * n, e.style.transform = `translateX(-${n * s}px)`, l.addEventListener("click", () => { for (let e of o) e.style.animation = "carouselImgAnimate 1s ease-in-out backwards"; s < 6 && s >= 1 ? (s++, c.innerHTML = s, e.style.transform = `translateX(-${n * s}px)`) : (s = 1, c.innerHTML = s, e.style.transform = `translateX(-${n * s}px)`) }), t.addEventListener("click", () => { for (let e of o) e.style.animation = "carouselImgAnimate 1s ease-in-out backwards"; s <= 6 && s > 1 ? (s--, c.innerHTML = s, e.style.transform = `translateX(-${n * s}px)`) : (s = 6, c.innerHTML = s, e.style.transform = `translateX(-${n * s}px)`) }) } function screenLoaded() { document.querySelector(".loaderContainer").style.display = "none", document.querySelector("body").style.overflow = "auto" } function navToggle() { let e = document.querySelector(".comboBtn .menuOpen"), t = document.querySelector(".comboBtn .menuClose"), l = document.querySelector("nav"); e.addEventListener("click", () => { t.style.display = "block", e.style.display = "none", document.querySelector("nav").style.bottom = "0", document.querySelector("nav .row > div:nth-of-type(2)").style.display = "block", document.querySelector("nav .row > .navJoinUsContainer").style.display = "block", document.querySelector("body").style.overflow = "hidden", l.style.backgroundColor = "#000" }), t.addEventListener("click", () => { t.style.display = "none", e.style.display = "block", document.querySelector("nav").style.bottom = "", document.querySelector("nav .row > div:nth-of-type(2)").style.display = "none", document.querySelector("nav .row > .navJoinUsContainer").style.display = "none", document.querySelector("body").style.overflow = "auto" }) } function mobileEditFire() { const e = document.querySelectorAll(".mobileEditLabel"), t = document.querySelectorAll(".mobileEditImg"); let l, o = 2; for (let t of e) t.addEventListener("click", e => { s(l = e.currentTarget.attributes["label-data"].value) }); function s(l) { switch (l) { case "1": 0 !== o && (e[0].classList.add("activeItemE"), e[1].classList.remove("activeItemE"), e[2].classList.remove("activeItemE"), t[0].style.zIndex = "0", t[1].style.zIndex = "-1", t[2].style.zIndex = "-1"); break; case "2": 1 !== o && (e[1].classList.add("activeItemE"), e[0].classList.remove("activeItemE"), e[2].classList.remove("activeItemE"), t[0].style.zIndex = "-1", t[1].style.zIndex = "0", t[2].style.zIndex = "-1"); break; case "3": 2 !== o && (e[2].classList.add("activeItemE"), e[0].classList.remove("activeItemE"), e[1].classList.remove("activeItemE"), t[0].style.zIndex = "-1", t[1].style.zIndex = "-1", t[2].style.zIndex = "0"); break; default: e[0].classList.add("activeItemE"), e[1].classList.remove("activeItemE"), e[2].classList.remove("activeItemE") }1 !== (o = l - 1) && 2 !== o && 3 !== o && (o = 0) } } function aboutUsContainer() { const e = document.querySelectorAll(".listHeader"), t = document.querySelector(".closeCurrencyLayer"), l = document.querySelector(".closeLanguageLayer"), o = document.querySelector("#currency"), s = document.querySelector("#language"), n = document.querySelector("#currencyBtn"), c = document.querySelector("#languageBtn"); for (item of e) item.addEventListener("click", e => { console.log(e.toElement.nextElementSibling), e.toElement.nextElementSibling.classList.toggle("showList") }); n.addEventListener("click", () => { o.classList.toggle("displayLayer"), t.addEventListener("click", () => { o.classList.remove("displayLayer") }) }), c.addEventListener("click", () => { s.classList.toggle("displayLayer"), l.addEventListener("click", () => { s.classList.remove("displayLayer") }) }) } document.addEventListener("DOMContentLoaded", () => { screenLoaded(), scrollEvent(), navToggle(), analyticsFire(), carouselFiring(), mobileEditFire(), aboutUsContainer() });
+document.addEventListener('DOMContentLoaded', () => {
+    screenLoaded();
+    scrollEvent();
+    navToggle();
+    analyticsFire();
+    carouselFiring();
+    mobileEditFire();
+    aboutUsContainer();
+    navResponsive();
+
+})
+function navResponsive() {
+    let firstNavItems = document.querySelector(".navItem:first-of-type");
+    let lastNavItem = document.querySelector(".navItem:last-of-type")
+    let w = document.documentElement.clientWidth;
+    window.addEventListener("resize", (e) => {
+        w = e.currentTarget.innerWidth
+    })
+    firstNavItems.addEventListener("click", (e) => {
+        if (w < 991) {
+            e.currentTarget.childNodes[3].classList.toggle("showNavLayer");
+            e.currentTarget.childNodes[1].classList.toggle("arrowSmallMotion");
+        };
+    })
+    lastNavItem.addEventListener("click", (e) => {
+        if (w < 991) {
+            e.currentTarget.childNodes[3].classList.toggle("showNavLayer");
+            e.currentTarget.childNodes[1].classList.toggle("arrowSmallMotion");
+        }
+    })
+
+}
+function analyticsFire() {
+    const analyticLabels = document.querySelectorAll(".analyticsLabel");
+    const analyticImgs = document.querySelectorAll(".analyticImg");
+    let labelNumber;
+    let lastSelected = 2;
+    for (let label of analyticLabels) {
+        label.addEventListener("click", (e) => {
+            labelNumber = e.currentTarget.attributes["label-data"].value;
+            getCases(labelNumber)
+
+
+        })
+    }
+    function getCases(lNum) {
+        switch (lNum) {
+            case '1':
+                if (lastSelected !== 0) {
+                    analyticLabels[0].classList.add("activeItem");
+                    analyticLabels[1].classList.remove("activeItem");
+                    analyticLabels[2].classList.remove("activeItem");
+                    analyticImgs[0].style.zIndex = "0";
+                    analyticImgs[1].style.zIndex = "-1";
+                    analyticImgs[2].style.zIndex = "-1";
+                }
+                break;
+            case '2':
+                if (lastSelected !== 1) {
+                    analyticLabels[1].classList.add("activeItem");
+                    analyticLabels[0].classList.remove("activeItem");
+                    analyticLabels[2].classList.remove("activeItem");
+                    analyticImgs[0].style.zIndex = "-1";
+                    analyticImgs[1].style.zIndex = "0";
+                    analyticImgs[2].style.zIndex = "-1";
+                }
+                break;
+            case '3':
+                if (lastSelected !== 2) {
+                    analyticLabels[2].classList.add("activeItem");
+                    analyticLabels[0].classList.remove("activeItem");
+                    analyticLabels[1].classList.remove("activeItem");
+                    analyticImgs[0].style.zIndex = "-1";
+                    analyticImgs[1].style.zIndex = "-1";
+                    analyticImgs[2].style.zIndex = "0";
+                }
+                break;
+
+            default:
+                analyticLabels[0].classList.add("activeItem");
+                analyticLabels[1].classList.remove("activeItem");
+                analyticLabels[2].classList.remove("activeItem");
+                break;
+        }
+        lastSelected = lNum - 1;
+        if (lastSelected !== 1 && lastSelected !== 2 && lastSelected !== 3)
+            lastSelected = 0;
+    }
+}
+
+function scrollEvent() {
+    let screenYPos;
+    let nav = document.querySelector("nav");
+    const portfolio = document.querySelector("#portfolio");
+    let portfolioPos = portfolio.offsetTop - portfolio.offsetHeight;
+    const blogs = document.querySelector("#blogs");
+    let blogsPos = blogs.offsetTop - blogs.offsetHeight;
+    const blogDesign = document.querySelector(".blogDesign");
+    const blogDescription = document.querySelector(".blogDescription");
+
+    const SEOSection = document.querySelector("#SEO");
+    let SEOPos = SEOSection.offsetTop - SEOSection.offsetHeight;
+    document.addEventListener("scroll", (e) => {
+        /*This is for Navbar background */
+        screenYPos = e.target.scrollingElement.scrollTop;
+        if (screenYPos > 10) {
+            nav.style.backgroundColor = "#000";
+        }
+        else
+            nav.style.backgroundColor = "transparent";
+
+
+        /*this is for portfolio section animation */
+        if (screenYPos >= portfolioPos) {
+            portfolio.classList.add("portfolioMove");
+        }
+        /*this is for blog section animation */
+        if (screenYPos >= blogsPos) {
+            blogDesign.classList.add("blogAnimation");
+            blogDescription.classList.add("blogAnimation");
+
+
+        }
+        /*this section is for SEO animation */
+        if (screenYPos >= SEOPos) {
+            SEOSection.classList.add("SEOAnimation");
+        }
+    })
+}
+function carouselFiring() {
+    const carousel = document.querySelector(".carouselInnerContainer");
+    const prevSlide = document.querySelector(".prevSlide");
+    const nextSlide = document.querySelector(".nextSlide");
+    const carImages = document.querySelectorAll(".craouselItem img");
+    let carouselCounter = 1;
+    let carouseImgSize = document.querySelectorAll(".craouselItem")[0].clientWidth;
+    let slideNumber = document.querySelector("#slideNumber");
+    document.querySelector(".carouselOuterContainer").style.width = 1.5 * carouseImgSize;
+    carousel.style.transform = `translateX(-${(carouseImgSize * carouselCounter)}px)`;
+    /*Next And Previous handling */
+    nextSlide.addEventListener("click", () => {
+        for (let x of carImages) {
+            x.style.animation = "carouselImgAnimate 1s ease-in-out backwards";
+        }
+        if ((carouselCounter < 6) && (carouselCounter >= 1)) {
+            carouselCounter++;
+            slideNumber.innerHTML = carouselCounter;
+            carousel.style.transform = `translateX(-${(carouseImgSize * carouselCounter)}px)`;
+        }
+        else {
+            carouselCounter = 1;
+            slideNumber.innerHTML = carouselCounter;
+            carousel.style.transform = `translateX(-${(carouseImgSize * carouselCounter)}px)`;
+        }
+    })
+    prevSlide.addEventListener("click", () => {
+        for (let x of carImages) {
+            x.style.animation = "carouselImgAnimate 1s ease-in-out backwards";
+        }
+        if ((carouselCounter <= 6) && (carouselCounter > 1)) {
+            carouselCounter--;
+            slideNumber.innerHTML = carouselCounter;
+            carousel.style.transform = `translateX(-${(carouseImgSize * carouselCounter)}px)`;
+        }
+        else {
+            carouselCounter = 6;
+            slideNumber.innerHTML = carouselCounter;
+            carousel.style.transform = `translateX(-${(carouseImgSize * carouselCounter)}px)`;
+        }
+    })
+}
+function screenLoaded() {
+    document.querySelector(".loaderContainer").style.display = "none";
+    document.querySelector("body").style.overflow = "auto";
+}
+function navToggle() {
+    let menuOpen = document.querySelector(".comboBtn .menuOpen");
+    let menuClose = document.querySelector(".comboBtn .menuClose");
+    let nav = document.querySelector("nav");
+
+    menuOpen.addEventListener("click", () => {
+        menuClose.style.display = "block";
+        menuOpen.style.display = "none";
+        document.querySelector("nav").style.bottom = "0";
+        document.querySelector("nav .row > div:nth-of-type(2)").style.display = "block";
+        document.querySelector("nav .row > .navJoinUsContainer").style.display = "block";
+        document.querySelector("body").style.overflow = "hidden";
+        nav.style.backgroundColor = "#000";
+    })
+    menuClose.addEventListener("click", () => {
+        menuClose.style.display = "none";
+        menuOpen.style.display = "block";
+        document.querySelector("nav").style.bottom = "";
+        document.querySelector("nav .row > div:nth-of-type(2)").style.display = "none";
+        document.querySelector("nav .row > .navJoinUsContainer").style.display = "none";
+        document.querySelector("body").style.overflow = "auto";
+
+    })
+}
+
+
+function mobileEditFire() {
+    const mobileEditLabels = document.querySelectorAll(".mobileEditLabel");
+    const mobileEditImgs = document.querySelectorAll(".mobileEditImg");
+    let labelNumber;
+    let lastSelected = 2;
+    for (let label of mobileEditLabels) {
+        label.addEventListener("click", (e) => {
+            labelNumber = e.currentTarget.attributes[1].value;
+            getCases(labelNumber);
+
+
+        })
+    }
+    function getCases(lNum) {
+        switch (lNum) {
+            case '1':
+                if (lastSelected !== 0) {
+                    mobileEditLabels[0].classList.add("activeItemE");
+                    mobileEditLabels[1].classList.remove("activeItemE");
+                    mobileEditLabels[2].classList.remove("activeItemE");
+                    mobileEditImgs[0].style.zIndex = "0";
+                    mobileEditImgs[1].style.zIndex = "-1";
+                    mobileEditImgs[2].style.zIndex = "-1";
+                }
+                break;
+            case '2':
+                if (lastSelected !== 1) {
+                    mobileEditLabels[1].classList.add("activeItemE");
+                    mobileEditLabels[0].classList.remove("activeItemE");
+                    mobileEditLabels[2].classList.remove("activeItemE");
+                    mobileEditImgs[0].style.zIndex = "-1";
+                    mobileEditImgs[1].style.zIndex = "0";
+                    mobileEditImgs[2].style.zIndex = "-1";
+                }
+                break;
+            case '3':
+                if (lastSelected !== 2) {
+                    mobileEditLabels[2].classList.add("activeItemE");
+                    mobileEditLabels[0].classList.remove("activeItemE");
+                    mobileEditLabels[1].classList.remove("activeItemE");
+                    mobileEditImgs[0].style.zIndex = "-1";
+                    mobileEditImgs[1].style.zIndex = "-1";
+                    mobileEditImgs[2].style.zIndex = "0";
+                }
+                break;
+
+            default:
+                mobileEditLabels[0].classList.add("activeItemE");
+                mobileEditLabels[1].classList.remove("activeItemE");
+                mobileEditLabels[2].classList.remove("activeItemE");
+                break;
+        }
+        lastSelected = lNum - 1;
+        if (lastSelected !== 1 && lastSelected !== 2 && lastSelected !== 3)
+            lastSelected = 0;
+    }
+}
+
+
+function aboutUsContainer() {
+    const listHeaders = document.querySelectorAll(".listHeader");
+    const closeCurrencyLayer = document.querySelector(".closeCurrencyLayer");
+    const closeLanguageLayer = document.querySelector(".closeLanguageLayer");
+    const currencyLayer = document.querySelector("#currency");
+    const languageLayer = document.querySelector("#language");
+    const currencyBtn = document.querySelector("#currencyBtn");
+    const languageBtn = document.querySelector("#languageBtn");
+    for (item of listHeaders) {
+        item.addEventListener("click", (e) => {
+            e.currentTarget.nextElementSibling.classList.toggle("showList");
+        })
+    }
+    currencyBtn.addEventListener("click", () => {
+        currencyLayer.classList.toggle("displayLayer");
+        closeCurrencyLayer.addEventListener("click", () => {
+            currencyLayer.classList.remove("displayLayer");
+        })
+    })
+    languageBtn.addEventListener("click", () => {
+        languageLayer.classList.toggle("displayLayer");
+        closeLanguageLayer.addEventListener("click", () => {
+            languageLayer.classList.remove("displayLayer");
+        })
+    })
+}

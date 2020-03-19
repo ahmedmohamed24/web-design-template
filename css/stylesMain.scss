@@ -1,5 +1,6 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+
 *{
   margin: 0;
   padding: 0;
@@ -18,14 +19,15 @@
 body{
   background-color: var(--color-body);
   overflow: hidden;
-
+  
 }
 body::-webkit-scrollbar{
   width: 0.8rem;
 }
 body::-webkit-scrollbar-thumb{
-  background-color: #16a085;
-  border-radius: 30%;
+  background-color: #34495e;
+  border-radius: 15px;
+
 }
 body::-webkit-scrollbar-track{
   background-color: #f1f1f1;
@@ -270,19 +272,24 @@ nav{
                 margin-top:1rem;
                }
               &:first-of-type{
-
+                cursor: pointer;
                   &:hover{
                       &{
+                        @media (min-width:991px){
                            cursor: default;
+                        }
                       }
                       > span{
+                        display: inline-block;
+                        -webkit-transition: all 0.3s;
+                          -o-transition: all 0.3s;
+                          transition: all 0.3s;
+                        @media (min-width:991px){
                           -webkit-transform: rotate(180deg) translateY(3px);
                               -ms-transform: rotate(180deg) translateY(3px);
                                   transform: rotate(180deg) translateY(3px);
-                          display: inline-block;
-                          -webkit-transition: all 0.3s;
-                          -o-transition: all 0.3s;
-                          transition: all 0.3s;
+                          
+                        }
                       }
                      @media (min-width:991px){
                       >.productsLayer
@@ -300,11 +307,7 @@ nav{
                                 animation: animateNavList 0.3s linear forwards 1 ;
                       }
                      }
-                     @media(max-width:991px){
-                      >.productsLayer{
-                        display: block;
-                      }
-                    }
+                     
                   }
                   >.productsLayer{
                     @media (min-width:991px){
@@ -400,14 +403,9 @@ nav{
                   }
               }
               &:last-of-type{
-                &:hover{
-                  @media (max-width:991px){
-                    >.resourcesLayer {
-                      display: block;
-                    }
-                  }
-                }
+                cursor: pointer;
                   >span{
+                    
                     display: inline-block;
                     -webkit-transition: all 0.3s;
                     -o-transition: all 0.3s;
@@ -488,10 +486,11 @@ nav{
 
                     }
                     &:hover{
-                        &{
-                            cursor: default;
-                        }
+                        
                         @media(min-width:991px){
+                          &{
+                            cursor: default;
+                          }
                           .resourcesLayer
                           {
                             display: -webkit-box;
@@ -503,13 +502,14 @@ nav{
                             -webkit-animation: animateNavList 0.3s linear forwards 1;
                                     animation: animateNavList 0.3s linear forwards 1;
                           }
-                        }
-                        >span{
+                          >span{
                           -webkit-transform: rotate(180deg);
                               -ms-transform: rotate(180deg);
                                   transform: rotate(180deg);
 
                         }
+                        }
+                        
                     }
               }
           }
@@ -594,7 +594,14 @@ nav{
     }
   }
 }
-
+.showNavLayer{
+  display: block !important;
+}
+.arrowSmallMotion{
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
 @-webkit-keyframes animateNavList{
 0%{
   top:calc(-100%);
@@ -792,6 +799,29 @@ header {
 
 
 
+@-webkit-keyframes headerMove{
+  0%{
+    top:0;
+  }
+  20%{
+    top:0;
+  }
+  80%{
+    top:calc(-250%);
+    @media(max-width:991px){
+      top:calc(-150%);
+    }
+    @media(max-width:500px){
+      top:calc(-20%);
+    }
+  }
+  100%{
+    top:0;
+  }
+}
+
+
+
 @keyframes headerMove{
   0%{
     top:0;
@@ -857,9 +887,19 @@ section.awardDesigns{
   }
   >.carouselInnerContainer{
     &{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       
+      -webkit-transition: -webkit-transform 0.7s ease-in-out;
+      
+      transition: -webkit-transform 0.7s ease-in-out;
+      
+      -o-transition: transform 0.7s ease-in-out;
+      
       transition: transform 0.7s ease-in-out;
+      
+      transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
     }
     >.craouselItem{
       position: relative;
@@ -876,8 +916,12 @@ section.awardDesigns{
         &:hover{
           opacity: 1;
         }
+        -webkit-transition: opacity 0.5s ease-in-out;
+        -o-transition: opacity 0.5s ease-in-out;
         transition: opacity 0.5s ease-in-out;
         opacity: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         position: absolute;
         top: 0;
@@ -939,12 +983,24 @@ to{
   width:0
 }
 }
-@keyframes carouselImgAnimate{
+@-webkit-keyframes carouselImgAnimate{
   0%{
-    transform: skew(15deg);
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
   }
   100%{
-    transform: skew(0);
+    -webkit-transform: skew(0);
+            transform: skew(0);
+  }
+}
+@keyframes carouselImgAnimate{
+  0%{
+    -webkit-transform: skew(15deg);
+            transform: skew(15deg);
+  }
+  100%{
+    -webkit-transform: skew(0);
+            transform: skew(0);
   }
 }
 /* portfolio Section ---------------------------------------------*/
@@ -952,7 +1008,9 @@ section#portfolio{
   &{
     background-color: #7c6b4e;
     opacity: 0;
-    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+            transform: translateY(40px);
   }
   >.portfolioDetails{
     &{
@@ -1004,24 +1062,44 @@ section#portfolio{
   }
 }
 .portfolioMove{
-  animation: portMotion 1s ease-in-out forwards;
+  -webkit-animation: portMotion 1s ease-in-out forwards;
+          animation: portMotion 1s ease-in-out forwards;
+}
+@-webkit-keyframes portMotion{
+  from{
+    opacity: 0;
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 @keyframes portMotion{
   from{
     opacity: 0;
-    transform: translateY(40px);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
   }
   to{
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*Blogs Section----------------------------------------------------- */
 section#blogs{
   overflow-x: hidden;
   @media (min-width:991px){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal; 
+    -webkit-box-direction: reverse; 
+        -ms-flex-direction: row-reverse; 
+            flex-direction: row-reverse;
     >div{
       width: 50%;
     }
@@ -1029,14 +1107,18 @@ section#blogs{
   >.blogDesign{
     background-image: url("../images/background-750w.jpg");
     text-align: center;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     >img{
       max-width: 70%;
       
     }
   }
   >.blogDescription{
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
 
     background-color: #f0eef2;
     >h2{
@@ -1064,11 +1146,19 @@ section#blogs{
   }
 }
 .blogAnimation{
-  animation: blogAnimate 1s ease-in-out forwards;
+  -webkit-animation: blogAnimate 1s ease-in-out forwards;
+          animation: blogAnimate 1s ease-in-out forwards;
+}
+@-webkit-keyframes blogAnimate{
+  to{
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 @keyframes blogAnimate{
   to{
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 .blogOffers{
@@ -1175,7 +1265,13 @@ section#SEO{
 
 }
 .SEOAnimation{
-  animation: SEOAnimate 2s ease-in-out forwards;
+  -webkit-animation: SEOAnimate 2s ease-in-out forwards;
+          animation: SEOAnimate 2s ease-in-out forwards;
+}
+@-webkit-keyframes SEOAnimate{
+  to{
+    opacity: 1;
+  }
 }
 @keyframes SEOAnimate{
   to{
@@ -1234,6 +1330,8 @@ section#analytics{
               position: absolute;
               list-style: none;
               z-index: 0;
+              -webkit-transition: all 0.5s;
+              -o-transition: all 0.5s;
               transition: all 0.5s;
               @media (min-width:991px){
                 top: 40%;
@@ -1244,13 +1342,17 @@ section#analytics{
                 top:30%;
                 left: 50%;
                 width: 90%;
-                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
               }
               @media (min-width:648px )and(max-width:990px){
                 top:30%;
                 left: 50%;
                 width: 60%;
-                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
               }
             }
           }
@@ -1381,26 +1483,38 @@ section#mobileEdit{
               position: absolute;
               list-style: none;
               z-index: 0;
+              -webkit-transition: all 0.5s;
+              -o-transition: all 0.5s;
               transition: all 0.5s;
               top: 50%;
               left: 50%;
-              transform: translate(50%,-50%);
+              -webkit-transform: translate(50%,-50%);
+                  -ms-transform: translate(50%,-50%);
+                      transform: translate(50%,-50%);
              
                 
               @media (max-width:1200px){
                 top: 50%;
                 left: 50%;
                
-                transform: translate(50%,-50%) scale(0.85);
+                -webkit-transform: translate(50%,-50%) scale(0.85);
+               
+                    -ms-transform: translate(50%,-50%) scale(0.85);
+               
+                        transform: translate(50%,-50%) scale(0.85);
                 
               }
               @media (min-width:648px )and(max-width:990px){
                   top: 50%;
                  width: 60%;
-                 transform: translate(-50%,-45%) scale(0.85);
+                 -webkit-transform: translate(-50%,-45%) scale(0.85);
+                     -ms-transform: translate(-50%,-45%) scale(0.85);
+                         transform: translate(-50%,-45%) scale(0.85);
               }
               @media (max-width:646px){
-                transform: translate(-40%,-45%) scale(0.85);
+                -webkit-transform: translate(-40%,-45%) scale(0.85);
+                    -ms-transform: translate(-40%,-45%) scale(0.85);
+                        transform: translate(-40%,-45%) scale(0.85);
               }
             }
           }
@@ -1448,6 +1562,8 @@ section#aboutUs{
   .aboutHeader{
     padding:0 15px;
     @media (min-width:800px){
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
     >h2{
@@ -1484,11 +1600,17 @@ section#aboutUs{
   >.aboutContainer{
     
     @media(min-width:1133px){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     }
     >.aboutLists{
-      flex-grow: 1;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
       @media(min-width:900px){
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
       }
       >ul{
@@ -1521,6 +1643,8 @@ section#aboutUs{
                 
                 color: #fff;
                 font-size: 1rem;
+                -webkit-transition: all 0.3s;
+                -o-transition: all 0.3s;
                 transition: all 0.3s;
                 opacity: 0.6;
                 font-family: var(--text-mainFont);
@@ -1539,20 +1663,34 @@ section#aboutUs{
     }
     >.joinLogo{
       @media(max-width:1133px){
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
       }
       >.aboutLogo{
         margin-bottom: 30px;
-        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2);
         margin-left: 30px;
       }
       >ul{
         @media(max-width:1133px){
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
-          justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           padding: 0 20px;
           }
         list-style-type: none;
@@ -1593,9 +1731,6 @@ section#aboutUs{
         >ul{
           list-style-type: none;
           >li{
-            // color: #fff;
-            // border-bottom: 1px solid #fff;
-            // font-size: 1.5rem;
             @include anchorView();
             color: #fff;
             margin-bottom: 20px;
@@ -1661,6 +1796,8 @@ section#aboutUs{
     display: block !important;
   }
   .displayLayer{
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
   }
 } 
