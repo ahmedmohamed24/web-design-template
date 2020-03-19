@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Web Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/stylesMain.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="loaderContainer">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <nav class=" py-4 ">
+        <div class="row">
+            <div class="col-lg-3  col-md-6 col-sm-6 col-6 text-center">
+                <div class="navBrand ">
+                    <svg class="squarespace-full is-fill notranslate" xmlns="http://www.w3.org/2000/svg" width="166px"
+                        height="24px" viewBox="0 0 500 72">
+                        <title>Squarespace Logo</title>
+                        <path
+                            d="M18.49 38.15L46.67 10A10.16 10.16 0 0 1 61 10l2.19 2.19 4.39-4.39-2.19-2.2a16.38 16.38 0 0 0-23.14 0L14.09 33.76z">
+                        </path>
+                        <path
+                            d="M56.11 19.27l-4.39-4.39-28.19 28.19A10.15 10.15 0 0 1 9.18 28.71L33.5 4.39 29.11 0 4.79 24.32a16.36 16.36 0 1 0 23.13 23.14zM84.17 24.32a16.39 16.39 0 0 0-23.14 0L32.84 52.51l4.39 4.39 28.19-28.19a10.15 10.15 0 0 1 17.32 7.18 10 10 0 0 1-3 7.18L55.45 67.39l4.4 4.39 24.32-24.32a16.38 16.38 0 0 0 0-23.14z">
+                        </path>
+                        <path
+                            d="M70.47 33.63L42.28 61.81a10.17 10.17 0 0 1-14.36 0l-2.19-2.2L21.34 64l2.19 2.2a16.39 16.39 0 0 0 23.14 0L74.86 38z">
+                        </path>
+                        <path
+                            d="M114.7 43.47a6.71 6.71 0 0 0 2.55 4.2 8.56 8.56 0 0 0 5.29 1.51 7.54 7.54 0 0 0 5-1.49 4.89 4.89 0 0 0 1.76-3.92 4 4 0 0 0-.47-2 4.26 4.26 0 0 0-1.32-1.39 8.39 8.39 0 0 0-2.08-1l-2.78-.84-2.65-.72a24.41 24.41 0 0 1-4.27-1.57 13.2 13.2 0 0 1-3.23-2.16 8.33 8.33 0 0 1-2-2.85 9.33 9.33 0 0 1-.7-3.75 9.45 9.45 0 0 1 .9-4.12 9 9 0 0 1 2.53-3.22 12 12 0 0 1 4-2.11 16.53 16.53 0 0 1 5.26-.77q5.51 0 8.73 2.6a10.27 10.27 0 0 1 3.78 7l-6 .49a6 6 0 0 0-2.18-3.47 7.43 7.43 0 0 0-4.57-1.24 6.57 6.57 0 0 0-4.27 1.26 4 4 0 0 0-1.54 3.25 3.7 3.7 0 0 0 .45 1.91 4.1 4.1 0 0 0 1.29 1.34 9.2 9.2 0 0 0 2.06 1c.81.3 1.73.62 2.75.95l2.54.79q2.37.75 4.29 1.56a12.81 12.81 0 0 1 3.25 2 7.77 7.77 0 0 1 2.06 2.73 9.5 9.5 0 0 1 .72 3.92 10.31 10.31 0 0 1-1 4.54 10 10 0 0 1-2.78 3.5 13.13 13.13 0 0 1-4.25 2.24 17.54 17.54 0 0 1-5.43.79 15.57 15.57 0 0 1-9.18-2.58 11.21 11.21 0 0 1-4.57-7.85zM161.15 17.37a19.2 19.2 0 0 1 7.35 1.36 16.09 16.09 0 0 1 5.65 3.82 17.25 17.25 0 0 1 3.63 5.88 21.17 21.17 0 0 1 1.29 7.5 20.32 20.32 0 0 1-1.37 7.62 17.21 17.21 0 0 1-3.89 5.88l4.76 5.57v1.73h-6l-3.33-4.07a19.13 19.13 0 0 1-3.77 1.34 19.92 19.92 0 0 1-4.27.44 19.24 19.24 0 0 1-7.42-1.44 16 16 0 0 1-5.61-3.83 17 17 0 0 1-3.57-5.85 21.21 21.21 0 0 1-1.27-7.42 21.37 21.37 0 0 1 1.27-7.47 16.89 16.89 0 0 1 3.6-5.86 16.28 16.28 0 0 1 5.63-3.84 18.62 18.62 0 0 1 7.32-1.36zm-.05 5.36a11.15 11.15 0 0 0-4.79 1 10.16 10.16 0 0 0-3.57 2.75 12.33 12.33 0 0 0-2.24 4.16 17.11 17.11 0 0 0-.76 5.22 16.81 16.81 0 0 0 .79 5.26 12.89 12.89 0 0 0 2.26 4.21 10.32 10.32 0 0 0 3.57 2.8 11 11 0 0 0 4.79 1 11.44 11.44 0 0 0 4.79-1 10.09 10.09 0 0 0 3.57-2.71 12.16 12.16 0 0 0 2.26-4.18 17.4 17.4 0 0 0 .8-5.38 17 17 0 0 0-.8-5.3 12.35 12.35 0 0 0-2.26-4.16 10.33 10.33 0 0 0-3.59-2.72 11.35 11.35 0 0 0-4.82-.95zM202.64 49.38a7.63 7.63 0 0 0 6-2.36q2.13-2.35 2.13-7.22V18.06H217V40a19.58 19.58 0 0 1-1 6.62 11.45 11.45 0 0 1-2.83 4.52 11 11 0 0 1-4.51 2.58 22.51 22.51 0 0 1-12 0 10.93 10.93 0 0 1-4.49-2.58 11.56 11.56 0 0 1-2.83-4.52 19.6 19.6 0 0 1-1-6.62V18.06h6.25V39.8q0 4.86 2.14 7.22a7.61 7.61 0 0 0 5.91 2.36zM223.24 52l12.65-33.9h9.38L257.78 52v1.7h-6.15l-3.58-10.18h-15.43L229 53.7h-5.8zm11.26-13.8h11.77l-1.94-5.66c-.76-2.21-1.37-4-1.84-5.41s-.87-2.61-1.24-3.67h-1.53l-.6 1.69c-.2.56-.42 1.19-.67 1.88s-.52 1.49-.82 2.39-.66 1.93-1.09 3.12zM292.72 53.7h-6l-10.87-14h-4v14h-6.16V18.06h11.57a35.57 35.57 0 0 1 5.18.37 10.7 10.7 0 0 1 4.45 1.72q4.22 2.78 4.22 8.38a11.4 11.4 0 0 1-.73 4.24 9.46 9.46 0 0 1-1.91 3.08 10 10 0 0 1-2.75 2.06 14.26 14.26 0 0 1-3.25 1.19L292.72 52zm-20.89-19.36h5.41a10.45 10.45 0 0 0 5.63-1.3 4.67 4.67 0 0 0 2.06-4.26 4.38 4.38 0 0 0-2.09-4.18 11.4 11.4 0 0 0-5.6-1.18h-5.41zM300.66 18.06h23.08v5.46h-17v9.33h15.78v5.36h-15.75v10h17.32v5.49h-23.43zM337.89 43.47a6.71 6.71 0 0 0 2.55 4.2 8.58 8.58 0 0 0 5.29 1.51 7.54 7.54 0 0 0 5-1.49 4.89 4.89 0 0 0 1.76-3.92 4 4 0 0 0-.47-2 4.26 4.26 0 0 0-1.32-1.39 8.39 8.39 0 0 0-2.08-1l-2.78-.84-2.68-.74a24.41 24.41 0 0 1-4.27-1.57 13.2 13.2 0 0 1-3.23-2.16 8.33 8.33 0 0 1-2-2.85 10.12 10.12 0 0 1 .2-7.87 9.11 9.11 0 0 1 2.53-3.22 12 12 0 0 1 4-2.11 16.53 16.53 0 0 1 5.26-.77q5.51 0 8.74 2.6a10.26 10.26 0 0 1 3.77 7l-6 .49a6 6 0 0 0-2.16-3.47 7.41 7.41 0 0 0-4.57-1.24 6.57 6.57 0 0 0-4.27 1.26 4 4 0 0 0-1.53 3.25 3.7 3.7 0 0 0 .44 1.91 4.1 4.1 0 0 0 1.29 1.34 9.2 9.2 0 0 0 2.06 1c.81.3 1.73.62 2.76.95l2.53.79q2.38.75 4.29 1.56a12.81 12.81 0 0 1 3.25 2 7.77 7.77 0 0 1 2.06 2.73 9.5 9.5 0 0 1 .72 3.92 10.31 10.31 0 0 1-1 4.54 9.89 9.89 0 0 1-2.78 3.5A13.18 13.18 0 0 1 351 53.6a17.61 17.61 0 0 1-5.44.79 15.59 15.59 0 0 1-9.18-2.58 11.21 11.21 0 0 1-4.55-7.81zM367.91 18.06h13a18.72 18.72 0 0 1 6.08.85 10.22 10.22 0 0 1 4 2.33 8.6 8.6 0 0 1 2.18 3.5 13.52 13.52 0 0 1 .67 4.34 11.68 11.68 0 0 1-.92 4.84 8.71 8.71 0 0 1-2.65 3.4 12.07 12.07 0 0 1-4.22 2 21.42 21.42 0 0 1-5.61.67h-6.3V53.7h-6.21zm6.21 16.58h5.95a15.52 15.52 0 0 0 3-.27 7.11 7.11 0 0 0 2.38-.91 4.46 4.46 0 0 0 1.59-1.72 5.68 5.68 0 0 0 .57-2.66 5.93 5.93 0 0 0-.57-2.73 4.44 4.44 0 0 0-1.57-1.75 6.79 6.79 0 0 0-2.35-.91 15.29 15.29 0 0 0-3-.27h-6.05zM395.56 52l12.66-33.9h9.38L430.1 52v1.7H424l-3.57-10.18h-15.49l-3.57 10.18h-5.81zm11.27-13.8h11.76l-1.94-5.66c-.76-2.21-1.37-4-1.83-5.41l-1.24-3.67H412l-.6 1.69c-.2.56-.42 1.19-.67 1.88s-.52 1.49-.82 2.39-.66 1.93-1.09 3.12zM467.92 44.27a17.81 17.81 0 0 1-2.2 3.92 14.89 14.89 0 0 1-3.31 3.22 15.63 15.63 0 0 1-4.49 2.18 19.06 19.06 0 0 1-5.68.8A18.12 18.12 0 0 1 445 53a16.19 16.19 0 0 1-5.55-3.84 17.08 17.08 0 0 1-3.55-5.86 21.28 21.28 0 0 1-1.25-7.37 21.23 21.23 0 0 1 1.25-7.37 17 17 0 0 1 3.57-5.88 16.52 16.52 0 0 1 5.58-3.9 18.06 18.06 0 0 1 7.27-1.41 16.82 16.82 0 0 1 9.8 2.73 14.75 14.75 0 0 1 5.59 7.24l-6.31 1.24a10.41 10.41 0 0 0-3.6-4.29 9.74 9.74 0 0 0-5.58-1.56 10.43 10.43 0 0 0-4.69 1 10.15 10.15 0 0 0-3.47 2.79 12.43 12.43 0 0 0-2.16 4.21 17.41 17.41 0 0 0-.75 5.19 17.1 17.1 0 0 0 .77 5.22 12.36 12.36 0 0 0 2.23 4.15 10.37 10.37 0 0 0 3.57 2.71 11 11 0 0 0 4.77 1 9.3 9.3 0 0 0 5.73-1.69 11.64 11.64 0 0 0 3.5-4.12zM476.31 18.06h23.08v5.46h-17v9.33h15.81v5.36h-15.78v10h17.32v5.49h-23.43z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="col-lg-6 d-lg-block d-xl-block  ">
+                <ul class="navOptions d-lg-flex d-xl-flex">
+                    <li class="navItem">PRODUCTS <span><i class="fas fa-chevron-down"></i></span>
+                        <a class="productsLayer">
+                            <ul class="todoLists ">
+                                <li>CREATE A WEBSITE</li>
+                                <li>
+                                    <ul>
+                                        <li>Overview <span class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Award-Winning-Templates <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Websites Analytics <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Connected Services <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Hire an Expert <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="todoLists">
+                                <li>SELL ANYTHING</li>
+                                <li>
+                                    <ul>
+                                        <li>Overview <span class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Ecommerce Templates<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Sell Products <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Sell Services<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Schedule Appointments <span class="newItem">New</span> <span
+                                                class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>CheckOut,Payment & Taxes<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Point of sale<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Extensions <span class="newItem">New</span> <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="todoLists">
+                                <li>Build Your Brand</li>
+                                <li>
+                                    <ul>
+                                        <li>Overview <span class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                        <li>Email Marketing<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Stories <span class="newItem">New</span> <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="todoLists">
+                                <li>Get a Domain</li>
+                                <li>
+                                    <ul>
+                                        <li>Find a Domain<span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></li>
+                                        <li>Transfer Your Domain <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="navItem">TEMPLATES </li>
+                    <li class="navItem">RESOURCES <span><i class="fas fa-chevron-down"></i></span>
+                        <div class="resourcesLayer">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 ">
+                                    <div class="servicesContainer">
+                                        <h3>Squarespace Blog <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></h3>
+                                        <p>Stories and solutions for the modern entrepreneur</p><br>
+                                        <img src="images/blog-500w.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="servicesContainer">
+                                        <h3>Help Guides <span class="arrowMotion"><i
+                                                    class="fas fa-arrow-right"></i></span></h3>
+                                        <p>In-depth guides about the platform, our services, and how to get started</p>
+                                        <br>
+                                        <img src="images/help-500w (1).jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="servicesContainer">
+                                        <h3>Webinars <span class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </h3>
+                                        <p>Free, online sessions where you’ll learn the basics and refine your
+                                            Squarespace skills
+                                        </p><br>
+                                        <img src="images/webinars-500w.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="servicesContainer">
+                                        <h3>Forum <span class="arrowMotion"><i class="fas fa-arrow-right"></i></span>
+                                        </h3>
+                                        <p>Squarespace Forum is an online community for Squarespace users and
+                                            professionals to discuss best practices and seek advice</p>
+                                        <img src="images/forum-500w.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-lg-3 d-lg-block d-xl-block navJoinUsContainer">
+                <div class="navJoinUs  d-lg-flex d-xl-flex">
+                    <button class="navLogIN">LOG IN</button>
+                    <button class="navStart">GET STARTED</button>
+                </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-6  d-lg-none d-xl-none comboBtn ">
+                <span class="menuOpen">
+                    <i class="fas fa-bars fa-2x"></i>
+
+                </span>
+                <span class="menuClose">
+                    <i class="fas fa-times fa-2x"></i>
+                </span>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <header>
+        <div class="mainContainer  my-5">
+            <div class="row ">
+                <div class="col-lg-5 ">
+                    <div class="headerInfo">
+                        <h4>CREATE YOUR WEBSITE</h4>
+                        <h1>The Leader in Website Design</h1>
+                        <p>Stand out online with a professional website, online store, or portfolio. With Squarespace,
+                            you
+                            can turn any idea into a reality.</p>
+                        <button class="btn btn-light">GET STARTED</button>
+                    </div>
+                </div>
+                <div class="col-lg-7 ">
+                    <div class="Container ">
+                        <div class="mainBorder">
+                            <div class="headerContentContainer ">
+                                <p>`VELVET OUT NOW`</p>
+                                <button class="btn btn-outline-light"> listen</button>
+                            </div>
+                            <div class="headerImgContainer">
+                                <img src="images/site-complete_desktop-750w.jpg"
+                                    alt="singing girl - the main header of the website" class="  headerImg">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class=" d-lg-none d-xl-none startContainerInHeader">
+                <p>
+                    Stand out online with a professional website, online store, or portfolio. With Squarespace, you can
+                    turn any idea into a reality.
+                </p>
+                <button class="btn btn-light">GET STARTED</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="awardDesigns my-5">
+        <div class="awardHeadingContainer container-md">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="awardHeader w-75">
+                        <h2>Award-Winning Web Designs
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="awardDesc w-75">
+                        <p class="">Choose from an unrivaled set of best-in-class website templates. Customize the
+                            design to fit your
+                            personal style and professional needs.</p>
+                        <a>LEARN MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carouselOuterContainer pt-5">
+            <div class="carouselInnerContainer ">
+                <div class="craouselItem slide6">
+                    <img src="images/maru-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>maru</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide1">
+                    <img src="images/beaumont-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>Beaumont</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide2">
+                    <img src="images/vance-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer  align-items-center justify-content-center flex-column">
+                        <h3>Vance</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide3">
+                    <img src="images/matsuya-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>matsuya</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide4">
+                    <img src="images/crosby-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>crosby</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide5">
+                    <img src="images/souto-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer    align-items-center justify-content-center flex-column">
+                        <h3>souto</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide6">
+                    <img src="images/maru-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>maru</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+                <div class="craouselItem slide1">
+                    <img src="images/beaumont-750w.jpg" alt="design photo sample for portfolio" class=" ">
+                    <div class="carouselItemLayer   align-items-center justify-content-center flex-column">
+                        <h3>Beaumont</h3>
+                        <a href="#">Browse Template</a>
+                        <a href="#">Review Template</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carouselIndicators container my-4">
+            <div class="dirIndicators float-right">
+                <span class="prevSlide"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                <span class="mx-4 nextSlide"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+            </div>
+            <div class="numericIndicators float-left">
+                0<span id="slideNumber">1</span>/06
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+
+
+    <section id="portfolio" class="py-5 mt-4">
+        <div class="portfolioDetails ">
+            <h2>Portfolios</h2>
+            <p>
+                Present your work using Squarespace’s professional portfolio designs. Display projects in customizable
+                galleries and add password-protected pages to share private work with clients.
+            </p>
+            <a href="#">CREATE A PORTFOLIO</a>
+        </div>
+        <div class="porDesign container-lg container-md text-center my-5 p-5">
+            <img src="images/portfolio-foreground-750w.jpg" class="img-fluid" alt="portfolio foregroung">
+        </div>
+        <div class="portfolioLast container d-md-flex justify-content-between align-items-center">
+            <h5>CAYLON HACKWITH, PHOTOGRAPHER</h5>
+            <a href="#">CAYLONHACKWITH.COM</a>
+        </div>
+
+    </section>
+
+
+    <section id="blogs" class=" ">
+
+        <div class="blogDescription  p-5">
+            <h2>Blogging Tools</h2>
+            <p>
+                Take advantage of our powerful blogging tools to share your story, post company news, or announce a
+                product release. Categorize, share, and schedule your posts to make your content work for you.
+            </p>
+            <a href="#">CREATE A BLOG</a>
+        </div>
+        <div class="blogDesign  py-5">
+            <img src="images/blog_ui-750w.jpg" alt="blog photo" class="">
+    </section>
+
+    <div class="blogOffers my-5 px-4 ">
+        <div class="quote mb-3">
+            <q>
+                You get a <span>premium</span> look on your website <span>without struggling</span> to create it.
+            </q>
+        </div>
+        <div class="quoteDesc mb-3">
+            <p>
+                ADRIENNE RAQUEL, FASHION PHOTOGRAPHER
+                ADRIENNERAQUEL.COM
+            </p>
+            <a href="#">ADRIENNERAQUEL.COM</a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+
+    <section id="SEO" class="pt-5">
+        <div class="SEOHeader">
+            <h2>SEO Tools</h2>
+            <p>Get found in search by more people, more often. Our all-in-one platform takes the guesswork out of search
+                engine optimization for your website.</p>
+        </div>
+        <div class="SEOView mt-5">
+            <img src="images/seo_ui_1-500w.jpg" alt="SEO image design" id="firstSEOImg">
+            <img src="images/seo_ui_2-500w.jpg" alt="SEO image Design" id="secondSEOImg">
+
+        </div>
+    </section>
+
+
+    <section id="analytics" class="my-5 bg-primary ">
+        <div class="analyticsContainer">
+            <div class="analyticsHeader container-md py-4">
+                <h2>Analytics</h2>
+                <p>Learn where your website traffic is coming from, what your visitors are looking
+                    for, and how
+                    they’re
+                    interacting with your content or products through our in-depth Analytics tools.
+                </p>
+                <a href="#">LEARN MORE</a>
+            </div>
+            <div class="carouselBG">
+                <img src="images/background-750w (1).jpg" alt="background image" class="img-fluid">
+            </div>
+            <div class="analyticsCarousel">
+                <ul class="analyticsImgs">
+                    <li class="analyticImg ">
+                        <img src="images/analytics_ui_01-750w.jpg" img-data="1" class="img-fluid "
+                            alt="analytic Design photo 1">
+                    </li>
+                    <li class="analyticImg">
+                        <img src="images/analytics_ui_02-750w.jpg" img-data="2" class="img-fluid"
+                            alt="analytic Design photo 2">
+                    </li>
+                    <li class="analyticImg">
+                        <img src="images/analytics_ui_03-750w.jpg" img-data="3" class="img-fluid"
+                            alt="analytic Design photo 3">
+                    </li>
+                </ul>
+                <ol class="analyticsLabels">
+                    <li class="analyticsLabel container activeItem" label-data="1">
+                        Audience Insights: Learn about website visitors, including geographical locations and
+                        site paths.
+                    </li>
+                    <li class="analyticsLabel container" label-data="2">
+                        Popular Content: Find out which pages your visitors are engaging with the most.
+                    </li>
+                    <li class="analyticsLabel container" label-data="3">
+                        Top Products: View your best-selling products by revenue and units sold.
+                    </li>
+
+                </ol>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+
+    <section id="apps" class="my-5">
+        <div class="appsHeading">
+            <h2>Apps & Tools</h2>
+            <p>Integrate popular apps with your Squarespace website and access the tools you use, all in one place.
+            </p>
+            <a href="#">LEARN MORE</a>
+        </div>
+
+    </section>
+
+
+
+    <section id="mobileEdit" class="my-5 bg-primary ">
+        <div class="mobileEditContainer">
+            <div class="mobileEditHeader container-md py-4">
+                <h2>Mobile Editing</h2>
+                <p>Manage your Squarespace site while on the go with our powerful app.
+                </p>
+                <a href="#">DOWNLOAD FOR IOS</a>
+                <br>
+                <a href="#">DOWNLOAD FOR ANDROID</a>
+            </div>
+            <div class="carouselBGE">
+                <img src="images/background-750w (2).jpg" alt="background image for a girl" class="img-fluid">
+            </div>
+            <div class="mobileEditCarousel">
+                <ul class="mobileEditImgs">
+                    <li class="mobileEditImg ">
+                        <img src="images/mobile_ui_1-300w.jpg" img-dataE="1" class="img-fluid "
+                            alt="mobileEdit Design photo 1">
+                    </li>
+                    <li class="mobileEditImg">
+                        <img src="images/mobile_ui_2-300w.jpg" img-dataE="2" class="img-fluid"
+                            alt="mobileEdit Design photo 2">
+                    </li>
+                    <li class="mobileEditImg">
+                        <img src="images/mobile_ui_3-300w.jpg" img-dataE="3" class="img-fluid"
+                            alt="mobileEdit Design photo 3">
+                    </li>
+                </ul>
+                <ol class="mobileEditLabels">
+                    <li class="mobileEditLabel container activeItemE" label-dataE="1">
+                        Edit your site and update your settings with ease
+                    </li>
+                    <li class="mobileEditLabel container" label-dataE="2">
+
+                        Publish blog posts, upload images, and add new pages
+                    </li>
+                    <li class="mobileEditLabel container" label-dataE="3">
+                        Access Squarespace’s best-in-class customer support
+                    </li>
+
+                </ol>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+
+
+
+    <section id="aboutUs" class="py-5">
+        <div class="aboutHeader">
+            <h2>
+                Squarespace is the all‑in‑one platform to build a beautiful website.
+            </h2>
+            <div>
+                <a href="#">
+                    START A FREE TRIAL
+                </a>
+            </div>
+        </div>
+        <div class="aboutContainer   w-100  flex-row-reverse pt-5 px-3">
+
+            <div class="aboutLists   ">
+                <ul class=" flex-fill">
+                    <li class="listHeader">Products</li>
+                    <li>
+                        <ul>
+                            <li>Website Templates</li>
+                            <li>Websites</li>
+                            <li>DOMAINS</li>
+                            <li>ONLINE STORES</li>
+                            <li>POINT OF SALE</li>
+                            <li>EXTENSIONS</li>
+                            <li>MARKETING TOOLS</li>
+                            <li>EMAIL MARKETING</li>
+                            <li>SCHEDULING</li>
+                            <li>STORIES</li>
+                            <li>PROFESSIONAL EMAIL</li>
+                            <li>LOGO MAKER</li>
+                            <li>PRICING</li>
+                            <li>FEATURE LIST</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class=" flex-fill">
+                    <li class="listHeader">CUSTOMERS</li>
+                    <li>
+                        <ul>
+                            <li>FEATURED</li>
+                            <li>SMALL BUSINESSES</li>
+                            <li>PHOTOGRAPHERS</li>
+                            <li>BLOGGERS</li>
+                            <li>ARTISTS</li>
+                            <li>RESTAURANTS</li>
+                            <li>MUSICIANS</li>
+                            <li>WEDDINGS</li>
+                            <li>STUDENTS</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class=" flex-fill">
+                    <li class="listHeader">COMPANY</li>
+                    <li>
+                        <ul>
+                            <li>ABOUT</li>
+                            <li>CAREERS</li>
+                            <li>OUR BRAND</li>
+                            <li>PRESS & MEDIA</li>
+                            <li>NEWSROOM</li>
+                            <li>TERMS OF SERVICE</li>
+                            <li>PRIVACY POLICY</li>
+                            <li>CONTACT US</li>
+                            <li>TIMELINE</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class=" flex-fill">
+                    <li class="listHeader">COMMUNITY</li>
+                    <li>
+                        <ul>
+                            <li>HELP & SUPPORT</li>
+                            <li>HIRE AN EXPERT</li>
+                            <li>FORUM</li>
+                            <li>WEBINARS</li>
+                            <li>DEVELOPER PLATFORM</li>
+                            <li>CIRCLE</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class=" flex-fill">
+                    <li class="listHeader">FOLLOW</li>
+                    <li>
+                        <ul>
+                            <li>NEWSROOM</li>
+                            <li>SQUARESPACE BLOG</li>
+                            <li>CREATIVE BLOG</li>
+                            <li>ENGINEERING BLOG</li>
+                            <li>SERVICE STATUS</li>
+                            <li>INSTAGRAM</li>
+                            <li>YOUTUBE</li>
+                            <li>LINKEDIN</li>
+                            <li>FACEBOOK</li>
+                            <li>TWITTER</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="joinLogo px-4 ">
+                <div class="aboutLogo ">
+                    <svg class="squarespace-mark is-fill notranslate" width="30px" height="24px" viewBox="0 0 90 72"
+                        fill="#fff">
+                        <g data-name="Logo">
+                            <path
+                                d="M18.49 38.15L46.67 10A10.16 10.16 0 0 1 61 10l2.19 2.19 4.39-4.39-2.19-2.2a16.38 16.38 0 0 0-23.14 0L14.09 33.76z">
+                            </path>
+                            <path
+                                d="M56.11 19.27l-4.39-4.39-28.19 28.19A10.15 10.15 0 0 1 9.18 28.71L33.5 4.39 29.11 0 4.79 24.32a16.36 16.36 0 1 0 23.13 23.14zM84.17 24.32a16.39 16.39 0 0 0-23.14 0L32.84 52.51l4.39 4.39 28.19-28.19a10.15 10.15 0 0 1 17.32 7.18 10 10 0 0 1-3 7.18L55.45 67.39l4.4 4.39 24.32-24.32a16.38 16.38 0 0 0 0-23.14z">
+                            </path>
+                            <path
+                                d="M70.47 33.63L42.28 61.81a10.17 10.17 0 0 1-14.36 0l-2.19-2.2L21.34 64l2.19 2.2a16.39 16.39 0 0 0 23.14 0L74.86 38z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <ul>
+                    <li><button id="currencyBtn">$ USD <span><i class="fa fa-arrow-down"
+                                    aria-hidden="true"></i></span></button></li>
+
+                    <li><button id="languageBtn">English <span><i class="fa fa-arrow-down"
+                                    aria-hidden="true"></i></span></button></li>
+                </ul>
+                <div id="currency" class=" align-items-center justify-content-center flex-column">
+                    <span class="closeCurrencyLayer"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+                    <h2>Select Your Currency</h2>
+                    <ul>
+                        <li>$USD</li>
+                        <li>#AUD</li>
+                        <li>€EUR</li>
+                        <li>£GPB</li>
+                    </ul>
+                </div>
+                <div id="language" class=" align-items-center justify-content-center flex-column">
+                    <span class="closeLanguageLayer"><i class="fa fa-times fa-2x" aria-hidden="true"></i></span>
+                    <h2>Select Your Language</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Deutsch</li>
+                        <li>Español</li>
+                        <li>Français</li>
+                        <li>Italiano</li>
+                        <li>Português</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script src=" js/all.min.js"></script>
+    <script src="js/mainScript.js"></script>
+</body>
+
+</html>
