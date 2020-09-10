@@ -91,16 +91,15 @@ function analyticsFire() {
 function scrollEvent() {
     let screenYPos;
     let nav = document.querySelector("nav");
+    nav.style.backgroundColor = "transparent";
     const portfolio = document.querySelector("#portfolio");
     let portfolioPos = portfolio.offsetTop - portfolio.offsetHeight;
     const blogs = document.querySelector("#blogs");
     let blogsPos = blogs.offsetTop - blogs.offsetHeight;
     const blogDesign = document.querySelector(".blogDesign");
     const blogDescription = document.querySelector(".blogDescription");
-
     const SEOSection = document.querySelector("#SEO");
     let SEOPos = SEOSection.offsetTop - SEOSection.offsetHeight;
-    nav.style.backgroundColor = "transparent";
     document.addEventListener("scroll", (e) => {
         /*This is for Navbar background */
         screenYPos = e.target.scrollingElement.scrollTop;

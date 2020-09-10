@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34388e22-f560-4b0b-973c-70fc6575761b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/css/stylesMain.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesMain.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mainScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/mainScript.js" afterDir="false" />
-    </list>
+    <list default="true" id="34388e22-f560-4b0b-973c-70fc6575761b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +52,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599722456201</updated>
-      <workItem from="1599722457375" duration="334000" />
+      <workItem from="1599722457375" duration="747000" />
     </task>
     <servers />
   </component>
