@@ -199,7 +199,6 @@ nav{
       overflow: hidden;
       position: fixed;
       padding: 20px 15px;
-      background-color: transparent;
       top:0;
       left:0;
       right: 0;
@@ -211,7 +210,6 @@ nav{
   }
   @media (max-width:991px){
     overflow:auto;
-
   }
   .row{
       padding: 0;
@@ -384,7 +382,6 @@ nav{
                                       -webkit-transition: -webkit-transform 0.3s;
                                       transition: -webkit-transform 0.3s;
                                       -o-transition: transform 0.3s;
-                                      transition: transform 0.3s;
                                       transition: transform 0.3s, -webkit-transform 0.3s;
                                       visibility: hidden;
                                   }
@@ -675,7 +672,6 @@ header {
        }
        h1{
          font-size: 3rem;
-         font-weight: var(--text-HeadingFont);
          color: #fff;
          font-weight: 700;
        }
@@ -695,7 +691,6 @@ header {
       >.Container{
         &{
           position:relative;
-          margin-top: 20px;
           width: 70%;
           height: 100%;
           margin: auto;
@@ -757,7 +752,7 @@ header {
                 font-size: 0.7rem;
                 @media (max-width:573px){
                   right:5px;
-                  font-size:0.6;
+                  font-size:0.6px;
                 }
                 @media (max-width:434px){
                   display: none;
@@ -891,15 +886,9 @@ section.awardDesigns{
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      
       -webkit-transition: -webkit-transform 0.7s ease-in-out;
-      
       transition: -webkit-transform 0.7s ease-in-out;
-      
       -o-transition: transform 0.7s ease-in-out;
-      
-      transition: transform 0.7s ease-in-out;
-      
       transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
     }
     >.craouselItem{

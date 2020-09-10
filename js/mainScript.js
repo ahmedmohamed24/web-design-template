@@ -100,12 +100,12 @@ function scrollEvent() {
 
     const SEOSection = document.querySelector("#SEO");
     let SEOPos = SEOSection.offsetTop - SEOSection.offsetHeight;
+    nav.style.backgroundColor = "transparent";
     document.addEventListener("scroll", (e) => {
         /*This is for Navbar background */
         screenYPos = e.target.scrollingElement.scrollTop;
-        if (screenYPos > 10) {
+        if (screenYPos > 10)
             nav.style.backgroundColor = "#000";
-        }
         else
             nav.style.backgroundColor = "transparent";
 
